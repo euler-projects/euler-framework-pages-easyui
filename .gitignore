@@ -2,3 +2,4 @@
 .settings
 .classpath
 euler-web-authentication-pages/target
+*.versionsBackup

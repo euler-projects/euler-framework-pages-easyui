@@ -6,7 +6,7 @@
     <version>1.0.0.M2-SNAPSHOT</version>
   </parent>
   <artifactId>euler-web-pages</artifactId>
-  <version>0.0.1.EASYUI-SNAPSHOT</version>
+  <version>1.0.0.M2.EASYUI-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
       <module>euler-web-authentication-pages</module>

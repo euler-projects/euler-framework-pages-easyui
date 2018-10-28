@@ -4,7 +4,7 @@
     <parent>
         <groupId>net.eulerframework</groupId>
         <artifactId>euler-web-pages</artifactId>
-        <version>0.0.1.EASYUI-SNAPSHOT</version>
+        <version>1.0.0.M2.EASYUI-SNAPSHOT</version>
     </parent>
     <artifactId>euler-web-authentication-pages</artifactId>
 
