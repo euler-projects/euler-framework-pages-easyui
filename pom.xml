@@ -10,5 +10,6 @@
   <packaging>pom</packaging>
   <modules>
       <module>euler-web-authentication-pages</module>
+      <module>euler-web-core-pages</module>
   </modules>
 </project>

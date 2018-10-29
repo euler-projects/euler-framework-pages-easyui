@@ -1,5 +1,5 @@
 .project
 .settings
 .classpath
-euler-web-authentication-pages/target
+target/
 *.versionsBackup

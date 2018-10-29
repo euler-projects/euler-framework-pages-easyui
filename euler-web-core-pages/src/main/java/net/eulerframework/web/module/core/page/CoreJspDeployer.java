@@ -13,15 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.eulerframework.web.core.listener;
+package net.eulerframework.web.module.core.page;
 
 import javax.servlet.annotation.WebListener;
+
+import net.eulerframework.web.core.listener.AbstractJspDeployer;
 
 /**
  * @author cFrost
  *
  */
 @WebListener
-public class AuthenticationJspDeployer extends AbstractJspDeployer {
+public class CoreJspDeployer extends AbstractJspDeployer {
 
 }
