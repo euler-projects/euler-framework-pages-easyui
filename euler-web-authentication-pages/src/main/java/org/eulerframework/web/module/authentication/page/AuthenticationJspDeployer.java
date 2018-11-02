@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.eulerframework.web.module.authentication.page;
+package org.eulerframework.web.module.authentication.page;
 
 import javax.servlet.annotation.WebListener;
 
-import net.eulerframework.web.core.listener.AbstractJspDeployer;
+import org.eulerframework.web.core.listener.AbstractJspDeployer;
 
 /**
  * @author cFrost
