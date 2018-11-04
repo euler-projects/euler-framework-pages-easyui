@@ -17,7 +17,7 @@ package org.eulerframework.web.module.authentication.page;
 
 import javax.servlet.annotation.WebListener;
 
-import org.eulerframework.web.core.listener.AbstractJspDeployer;
+import org.eulerframework.web.core.jsp.AbstractJspDeployer;
 
 /**
  * @author cFrost
