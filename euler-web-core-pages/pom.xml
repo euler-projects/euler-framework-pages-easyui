@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.eulerframework</groupId>
         <artifactId>euler-web-pages</artifactId>
-        <version>1.0.0.M2.EASYUI-SNAPSHOT</version>
+        <version>1.0.0.M2.EASYUI</version>
     </parent>
     <artifactId>euler-web-core-pages</artifactId>
 
@@ -17,7 +17,6 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>euler-web-support</artifactId>
-            <version>1.0.0.M2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
