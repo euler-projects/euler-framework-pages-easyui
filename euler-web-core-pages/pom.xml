@@ -6,18 +6,13 @@
         <artifactId>euler-web-pages</artifactId>
         <version>1.0.0.M2.EASYUI</version>
     </parent>
-    <artifactId>euler-web-authentication-pages</artifactId>
+    <artifactId>euler-web-core-pages</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-        </dependency>
-        
         
         <dependency>
             <groupId>${project.groupId}</groupId>
