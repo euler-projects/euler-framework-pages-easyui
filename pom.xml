@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.eulerframework</groupId>
-        <artifactId>euler-framework</artifactId>
-        <version>1.0.0.M3-SNAPSHOT</version>
+        <artifactId>euler-parent</artifactId>
+        <version>5-SNAPSHOT</version>
     </parent>
     <artifactId>euler-web-pages</artifactId>
     <version>1.0.0.M3.EASYUI-SNAPSHOT</version>
@@ -17,9 +17,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>euler-web-support</artifactId>
-                <version>1.0.0.M3-SNAPSHOT</version>
+                <groupId>org.eulerframework</groupId>
+                <artifactId>euler-web-dependencies</artifactId>
+                <version>1.0.0.M4-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
