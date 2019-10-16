@@ -4,3 +4,4 @@
 target/
 *.versionsBackup
 *.iml
+.flattened-pom.xml

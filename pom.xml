@@ -7,29 +7,77 @@
         <version>5-SNAPSHOT</version>
     </parent>
     <artifactId>euler-web-pages</artifactId>
-    <version>1.0.0.M3.EASYUI-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
     <modules>
         <module>euler-web-authentication-pages</module>
         <module>euler-web-core-pages</module>
     </modules>
 
+    <properties>
+        <revision>1.0.0.M7.EASYUI-SNAPSHOT</revision>
+        <main.basedir>${basedir}</main.basedir>
+
+        <euler-eulerframework.version>1.0.0.M7-SNAPSHOT</euler-eulerframework.version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.eulerframework</groupId>
                 <artifactId>euler-web-dependencies</artifactId>
-                <version>1.0.0.M4-SNAPSHOT</version>
+                <version>${euler-eulerframework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <inherited>true</inherited>
+                <executions>
+                    <execution>
+                        <!-- Tidy up all POMs before they are published -->
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                        <configuration>
+                            <updatePomFile>true</updatePomFile>
+                            <flattenMode>oss</flattenMode>
+                            <pomElements>
+                                <distributionManagement>remove</distributionManagement>
+                                <repositories>remove</repositories>
+                            </pomElements>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>flatten-clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:git:https://github.com/euler-projects/euler-framework-pages-easyui.git</connection>
+        <developerConnection>scm:git:git@github.com:euler-projects/euler-framework-pages-easyui.git</developerConnection>
+        <url>https://github.com/euler-projects/euler-framework-pages-easyui</url>
+    </scm>
+
     <repositories>
         <repository>
-            <id>euler-snapshots</id>
-            <name>Euler Snapshots</name>
+            <id>euler-repo-maven-snapshots</id>
+            <name>Snapshot Repository for Euler Projects</name>
             <url>https://repo.eulerproject.io/repository/maven-snapshots/</url>
             <releases>
                 <enabled>false</enabled>
