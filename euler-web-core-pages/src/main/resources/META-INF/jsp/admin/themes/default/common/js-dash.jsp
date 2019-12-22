@@ -33,9 +33,11 @@
     
     function onEulerIframeDlgConfirm() {
         window.frames['e-iframe-dlg-content'].onEulerIframeDlgConfirm(function (data){
-            eulerIframeDlgCallBackFunction(data);
-            $('#e-iframe-dlg-content').attr('src', '');
-            $('#e-iframe-dlg').dialog('close');            
+            var successed = eulerIframeDlgCallBackFunction(data);
+            if(successed === true) {
+                $('#e-iframe-dlg-content').attr('src', '');
+                $('#e-iframe-dlg').dialog('close');
+            }
         });
     }
     
@@ -95,6 +97,12 @@
     }
     
     var euler = {
+            getUrlParam: function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+                if (r != null) return unescape(r[2]); return null; //返回参数值
+            },
+
             table: {
                 loadData: function(table, data) {
                     var td = $(table).find('.data-td');

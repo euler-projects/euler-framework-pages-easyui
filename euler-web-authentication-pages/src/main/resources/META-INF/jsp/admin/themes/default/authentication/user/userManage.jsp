@@ -128,8 +128,8 @@
     onclick="euler.dialog(
                 '${__ADMIN_PATH}/authentication/user/userAuthorityManage', 
                 'userId='+$('#e-dg').datagrid('getSelections')[0].userId, 
-                '${e:i18n('_ADMIN_DASHBOARD_USER_AUTHORITY')}', 
-                null, 
+                '${e:i18n('_ADMIN_DASHBOARD_USER_AUTHORITY')}',
+                userManage.userAuthorityManageCallback,
                 {width:'800px', height:'600px'}
             )">${e:i18n('_ADMIN_DASHBOARD_USER_MENU_USER_AUTHORITY')}</div>
     <div id="mm-active" onclick="userManage.activeUser()">${e:i18n('_ADMIN_DASHBOARD_USER_MENU_ACTIVE_USER')}</div>
@@ -331,6 +331,20 @@ var userManage = {
                 onSearch();
             }
         });
+    },
+
+    userAuthorityManageCallback: function(data) {
+        var selectedGroupCodes;
+        if(selected != null) {
+            euler.msg.error("AAbb");
+            for(var i = 0; i < selected.length; i++) {
+                selectedGroupCodes[i] = selected[i].code;
+            }
+        } else {
+            euler.msg.error("没有选中任何权限");
+        }
+        console.log(data);
+        alert(data);
     }
 };
 </script>
