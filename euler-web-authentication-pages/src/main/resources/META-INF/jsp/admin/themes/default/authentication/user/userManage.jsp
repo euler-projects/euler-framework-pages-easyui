@@ -334,17 +334,38 @@ var userManage = {
     },
 
     userAuthorityManageCallback: function(data) {
-        var selectedGroupCodes;
-        if(selected != null) {
-            euler.msg.error("AAbb");
-            for(var i = 0; i < selected.length; i++) {
-                selectedGroupCodes[i] = selected[i].code;
-            }
-        } else {
-            euler.msg.error("没有选中任何权限");
-        }
         console.log(data);
-        alert(data);
+
+
+        let selectedGroupCodes = "";
+        if(data != null && data.selectedGroupCodes != null) {
+            for(const selectedGroupCode of data.selectedGroupCodes) {
+                selectedGroupCodes += "," + selectedGroupCode;
+            }
+        }
+
+        if(selectedGroupCodes.startsWith(",")) {
+            selectedGroupCodes = selectedGroupCodes.substring(1)
+        }
+
+        $.ajax({
+            url:'${__ADMIN_PATH}/ajax/authentication/group/updateUserGroup',
+            type:'POST',
+            async:true,
+            data: {
+                userId: data.userId,
+                groupCodes: selectedGroupCodes
+            },
+            error:function(XMLHttpRequest, textStatus, errorThrown) {
+                $('#fm-submit-mask').hide();
+                euler.msg.response.error(XMLHttpRequest);
+            },
+            success:function(data, textStatus) {
+                $('#fm-submit-mask').hide();
+            }
+        });
+
+        return true;
     }
 };
 </script>

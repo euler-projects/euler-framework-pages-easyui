@@ -49,6 +49,11 @@
                 <li><a href="javascript:void(0)" onclick="addTab('security/group/groupManage', '${e:i18n('_ADMIN_GROUP_MANAGE')}')">${e:i18n('_ADMIN_GROUP_MANAGE')}</a></li>
                 <li><a href="javascript:void(0)" onclick="addTab('security/authority/authorityManage', '${e:i18n('_ADMIN_AUTHORITY_MANAGE')}')">${e:i18n('_ADMIN_AUTHORITY_MANAGE')}</a></li>
                 </c:if>
+                <li><a href="javascript:void(0)" onclick="addTab('oauth/tokenManage', '${e:i18n('_ADMIN_OAUTH_CLIENT_MANAGE')}')">${e:i18n('_ADMIN_OAUTH_CLIENT_MANAGE')}</a></li>
+                <li><a href="javascript:void(0)" onclick="addTab('oauth/tokenManage', '${e:i18n('_ADMIN_OAUTH_RESOURCE_SERVER_MANAGE')}')">${e:i18n('_ADMIN_OAUTH_RESOURCE_SERVER_MANAGE')}</a></li>
+                <li><a href="javascript:void(0)" onclick="addTab('oauth/tokenManage', '${e:i18n('_ADMIN_OAUTH_TOKEN_MANAGE')}')">${e:i18n('_ADMIN_OAUTH_TOKEN_MANAGE')}</a></li>
+            </ul>
+            <ul>
                 <li><a href="${__CONTEXT_PATH}/">${e:i18n('_ADMIN_RETURN_HOME')}</a></li>
             </ul>
         </div>
