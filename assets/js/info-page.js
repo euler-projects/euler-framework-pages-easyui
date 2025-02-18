@@ -1,4 +1,4 @@
-function cleanUpTargetList(element) {
+function cleanUpActions(element) {
   let actionElements = $(element).children('.action');
   let actionCount = actionElements.length;
   for (let actionElement of actionElements) {
