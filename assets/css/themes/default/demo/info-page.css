@@ -80,6 +80,7 @@ div {
 
 .target-list {
     font-size: 1em;
+    max-width: 952px;
 }
 
 .target-list>span {
