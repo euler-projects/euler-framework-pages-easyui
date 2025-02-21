@@ -1,7 +1,5 @@
 html, body {
     font-size: 14px;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,6 +12,12 @@ html, body {
     min-height: 100vh;
     padding: 20px 20px 50px;
     box-sizing: border-box;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .container {
+        min-height: -webkit-fill-available;
+    }
 }
 
 .container > div {
