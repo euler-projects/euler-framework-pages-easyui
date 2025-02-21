@@ -15,12 +15,6 @@ html, body {
     box-sizing: border-box;
 }
 
-@supports (-webkit-touch-callout: none) {
-    .container {
-        min-height: -webkit-fill-available;
-    }
-}
-
 .container > div {
     margin-top: 20px;
     margin-bottom: 20px;
