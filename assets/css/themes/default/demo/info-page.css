@@ -1,6 +1,7 @@
 html, body {
     font-size: 14px;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     margin: 0;
     padding: 0;
     border: 0;
@@ -11,6 +12,7 @@ html, body {
 .container {
     width: 100%;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     padding: 20px 20px 50px;
 }
 
