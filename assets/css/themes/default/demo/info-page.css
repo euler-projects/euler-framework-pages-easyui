@@ -106,6 +106,7 @@ pre {
     margin-right: auto;
 }
 
-.actions > action {
-    padding: 0 6px 0 6px;
+.actions > .action {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
