@@ -1,5 +1,6 @@
 html, body {
     font-size: 14px;
+    min-height: 100dvh;
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,7 +10,7 @@ html, body {
 
 .container {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px 20px 50px;
     box-sizing: border-box;
 }
